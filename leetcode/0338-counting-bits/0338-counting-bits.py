@@ -1,21 +1,13 @@
 class Solution:
     def countBits(self, n: int) -> List[int]:
         
-        ans = []
-
         def convetIntoBinary(num ):
-            s = []
-
+            s = 0
             while num >=1:
                 b = num % 2
-                s.append(b)
+                if b == 1:
+                    s += 1
                 num = num // 2
             return s
 
-        for i in range(n+1):
-            arr = convetIntoBinary(i)
-
-            ones = arr.count(1)
-            ans.append(ones)
-
-        return ans
+        return [convetIntoBinary(i) for i in range(n+1)]
