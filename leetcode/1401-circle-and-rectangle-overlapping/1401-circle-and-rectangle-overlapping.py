@@ -2,10 +2,6 @@ class Solution:
     def checkOverlap(self, radius: int, xCenter: int, yCenter: int, x1: int, y1: int, x2: int, y2: int) -> bool:
         dx, dy = 0, 0
 
-        # put x and y on there ranges 
-        xRange = [x1, x2]
-        yRange = [y1, y2]
-
         # check xCenter is side the range of xRange
         if xCenter >= x1 and xCenter <= x2:
             dx = 0
