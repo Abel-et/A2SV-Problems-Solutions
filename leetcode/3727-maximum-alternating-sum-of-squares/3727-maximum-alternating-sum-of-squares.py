@@ -12,7 +12,6 @@ class Solution:
         total , left, right = 0 , 0 , len(nums) - 1
 
         while left < right:
-            print(nums[right], nums[left])
             total += nums[right] ** 2 - nums[left] ** 2
             left +=1
             right -=1
